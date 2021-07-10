@@ -1,6 +1,8 @@
 function displayInfo(pInfo: string) {
-    let DOMEl = window.document.querySelector('textarea');
-    DOMEl.innerHTML += '------------\n' + pInfo + '\n------------\n\n';
+    let DOMEl = window.document.querySelector('body');
+
+    pInfo = pInfo.replace(/\n/g, '<br />');
+    DOMEl.innerHTML += '------------<br />' + pInfo + '<br />------------<br /><br />';
 }
 
 let p = new Person('Louis', 30);

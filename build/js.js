@@ -108,8 +108,9 @@ var Rasta = /** @class */ (function (_super) {
     return Rasta;
 }(Person));
 function displayInfo(pInfo) {
-    var DOMEl = window.document.querySelector('textarea');
-    DOMEl.innerHTML += '------------\n' + pInfo + '\n------------\n\n';
+    var DOMEl = window.document.querySelector('body');
+    pInfo = pInfo.replace(/\n/g, '<br />');
+    DOMEl.innerHTML += '------------<br />' + pInfo + '<br />------------<br /><br />';
 }
 var p = new Person('Louis', 30);
 var p2 = new Fighter('Jordan', 43);
